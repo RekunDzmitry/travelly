@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - sudo apt-get install python3-pip
         - pip install -r requirements.txt
         - python travelly/manage.py runserver
   artifacts:
