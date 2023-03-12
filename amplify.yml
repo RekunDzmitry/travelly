@@ -1,0 +1,14 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - pip install -r requirements.txt
+        - python travelly/manage.py runserver
+  artifacts:
+    baseDirectory: /travelly
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - './.pip-cache/'
